@@ -5,30 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 13:05:21 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 13:28:09 by sali             ###   ########.fr       */
+/*   Created: 2021/10/06 13:30:10 by sali              #+#    #+#             */
+/*   Updated: 2021/10/06 13:48:35 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dst, const void *src, size_t len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
+	size_t s_len;
 
+	s_len = ft_strlen(src);
 	i = 0;
-	if (src < dst)
+	while(src[i] != '\0' && i < dstsize - 1)
 	{
-		while (len >= 0)
-		{
-			(unsigned char *)dst[len] = ((ungisned char *)src)[len];
-			len--;
-		}
-	}
-	while (i < len)
-	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		dst[i] = ((char *)src)[i];
 		i++;
 	}
-	return (dst);
+	dst[i] = '\0';
+	return (s_len);
 }
