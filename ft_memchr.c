@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:09:57 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 15:20:10 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 17:45:48 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	*memchr(const void *s, int c, size_t n)
 {
 	size_t i;
 
-	i = 0
+	i = 0;
 	while (i < n)
 	{
 		if(((unsigned char *)s)[i] == (unsigned char)c)
-			return (&s[i]);
+			return (&((void *)s)[i]);
 		i++;
 	}
 	return (NULL);

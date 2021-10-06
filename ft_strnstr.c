@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:27:24 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 15:50:55 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 18:04:51 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	j = 0;
 	i = 0;
 	if(!needle)
-		return (haystack);
+		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
 	{
 		if (haystack[i] == needle[0])
@@ -28,8 +28,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 			j = 0;
 			while(haystack[i + j] == needle[j])
 			{
-				if(needle[j + 1] = '\0')
-					return (&haystack[i]);
+				if(needle[j + 1] == '\0')
+					return (&((char *)haystack)[i]);
 				j++;
 			}
 		}

@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:48:59 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 14:07:39 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 18:02:24 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (d_len + dstsize);
 	while(src[i] != '\0' && i < dstsize - d_len - 1)
 	{
-		src[i] = dst[d_len];
+		dst[d_len] = src[i];
 		d_len++;
 		i++;
 	}

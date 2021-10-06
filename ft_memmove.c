@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:05:21 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 13:29:56 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 17:53:00 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*memmove(void *dst, const void *src, size_t len)
 	{
 		while (len >= 0)
 		{
-			(unsigned char *)dst[len] = ((ungisned char *)src)[len];
+			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
 			len--;
 		}
 	}

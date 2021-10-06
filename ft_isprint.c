@@ -6,11 +6,11 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:49:22 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 12:50:51 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 17:37:20 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

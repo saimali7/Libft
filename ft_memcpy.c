@@ -6,20 +6,20 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:02:41 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 13:05:01 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 17:52:01 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
-void	*ft_memcpy(void dst, void src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t i;
 
 	i = 0;
 	while(i < n)
 	{
-		dst[i] = src[i];
+		((unsigned char *)dst)[i] = ((unsigned char*)src)[i];
 		i++;
 	}
 	return (dst);

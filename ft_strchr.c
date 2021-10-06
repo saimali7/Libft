@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:17:14 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 14:23:02 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/06 18:06:07 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char *ft_strchr(const char *s, int c)
 	i = 0;
 	while(s[i] != '\0')
 	{
-		if((unsigned char)c == s[i]);
-			return (&s[i]);
+		if((unsigned char)c == s[i])
+			return (&((char *)s)[i]);
 	}
 	return (NULL);
 }
