@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
+/*   By: sali <sali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:39:10 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 12:41:22 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/07 11:05:22 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isidigt(int c)
+int	ft_isdigit(int c)
 {
 	if(c >= '0' && c <= '9')
 	{

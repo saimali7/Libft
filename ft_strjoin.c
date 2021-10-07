@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:18:31 by sali              #+#    #+#             */
-/*   Updated: 2021/10/07 09:30:24 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/07 16:11:04 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	size_t i;
 	size_t start;
 	char *ptr;
-
+	if(s1 == 0 || s2 == 0)
+		return (NULL);
 	i = 0;
 	start = 0;
 	ptr = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));

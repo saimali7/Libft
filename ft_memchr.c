@@ -6,13 +6,13 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:09:57 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 17:45:48 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/07 11:07:29 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t i;
 

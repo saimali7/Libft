@@ -21,14 +21,19 @@ SRC_NAME = ft_atoi.c\
         ft_strncmp.c\
         ft_strnstr.c\
         ft_tolower.c\
-        ft_toupper.c
+        ft_toupper.c\
+		ft_substr.c\
+		ft_strjoin.c\
+		ft_strtrim.c\
+		ft_split.c
+
 OBJ_NAME = $(SRC_NAME:.c=.o)
 HEADER = ./includes/
 CFLAG = -Wall -Wextra -Werror
 NAME = libft.a
 all: ${NAME}
 ${NAME}:
-	gcc -c $(CFLAG) $(SRC_NAME) -I$(HEADER)
+	gcc -c $(CFLAG) $(SRC_NAME)
 	ar -rc $(NAME) $(OBJ_NAME)
 	ranlib $(NAME)
 clean:

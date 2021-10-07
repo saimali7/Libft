@@ -6,13 +6,13 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:58:07 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 17:34:25 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/07 11:07:16 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t i;
 
