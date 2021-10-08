@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 16:57:43 by sali              #+#    #+#             */
-/*   Updated: 2021/10/07 22:59:08 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/08 19:51:33 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,19 +78,17 @@ char	**ft_splitnow(char const *s, char c, char **ptr)
 char **ft_split(char const *s, char c)
 {
 	char **ptr;
-	int i;
 	int arrysize;
 
 	if(!s)
-		return (NULL);
+		return(ft_calloc(1,1));
 	arrysize = ft_splitsize(s, c);
-	i = 0;
-	if((arrysize == 0) && (ft_strlen(s) > 0))
-		return ((char **)s);
 	ptr = (char **) malloc((arrysize + 1) * sizeof(char *));
 	if(ptr == NULL)
 		return (NULL);
 	ptr = ft_splitnow(s, c,  ptr);
+		if (arrysize == 0)
+		return (ptr); 
 	ptr[arrysize] = NULL;
 	return (ptr);
 }
@@ -99,8 +97,8 @@ char **ft_split(char const *s, char c)
 // {
 // 	int i = 0;
 // 	char **str;
-// 	str = ft_split("---this-is-apple-----", '-');
-// 	while (str[i] != '\0')
+// 	str = ft_split("", ' ');
+// 	while (str[i] != NULL)
 // 	{
 // 		printf("%s\n", str[i]);
 // 		i++;
