@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 12:56:39 by sali              #+#    #+#             */
-/*   Updated: 2021/10/09 14:30:11 by sali             ###   ########.fr       */
+/*   Created: 2021/10/09 14:37:11 by sali              #+#    #+#             */
+/*   Updated: 2021/10/09 14:39:53 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void ft_putchar_fd(char c, int fd)
 {
-	int i;
-
-	if( !s)
-		return;
-	i = 0;
-	while(s[i])
-	{
-		(*f)(i, &s[i]);
-		i++;
-	}
+	write(fd,&c,1);
 }
