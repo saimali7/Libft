@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:05:21 by sali              #+#    #+#             */
-/*   Updated: 2021/10/07 11:53:30 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:20:02 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-	char *d_dst = (char *)dst;
-	char *s_src = (char *)src;
+	size_t	i;
+	char	*d_dst;
+	char	*s_src;
 
+	d_dst = (char *)dst;
+	s_src = (char *)src;
 	i = 0;
-	if(!d_dst && !s_src)
+	if (!d_dst && !s_src)
 		return (NULL);
 	if (s_src < d_dst)
 	{

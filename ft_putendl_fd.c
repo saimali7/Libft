@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:50:41 by sali              #+#    #+#             */
-/*   Updated: 2021/10/09 15:13:59 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:22:22 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
-	if(!s)
-		return;
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		write(fd,&s[i],1);
+		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd,"\n",1);
+	write(fd, "\n", 1);
 }

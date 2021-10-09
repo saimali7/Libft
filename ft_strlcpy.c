@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:30:10 by sali              #+#    #+#             */
-/*   Updated: 2021/10/07 12:21:43 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:34:22 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t s_len;
+	size_t	i;
+	size_t	s_len;
 
 	s_len = ft_strlen(src);
 	i = 0;
 	if (dstsize)
 	{
-		while(src[i] != '\0' && i < dstsize - 1)
+		while (src[i] != '\0' && i < dstsize - 1)
 		{
 			dst[i] = ((char *)src)[i];
 			i++;

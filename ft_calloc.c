@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:08:54 by sali              #+#    #+#             */
-/*   Updated: 2021/10/06 17:35:39 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:02:53 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t i;
-	void *ptr;
+	size_t		i;
+	void		*ptr;
 
 	i = 0;
 	ptr = malloc(count * size);

@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 12:56:39 by sali              #+#    #+#             */
-/*   Updated: 2021/10/09 14:30:11 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:25:57 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int i;
+	int	i;
 
-	if( !s)
-		return;
+	if (!s)
+		return ;
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		(*f)(i, &s[i]);
 		i++;

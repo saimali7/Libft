@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:58:07 by sali              #+#    #+#             */
-/*   Updated: 2021/10/07 11:07:16 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:01:25 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	if(n > 0)
+	if (n > 0)
 	{	
-		while(i < n)
+		while (i < n)
 		{
 			((unsigned char *)s)[i] = 0;
 			i++;

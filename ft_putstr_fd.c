@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:45:07 by sali              #+#    #+#             */
-/*   Updated: 2021/10/09 15:11:41 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 16:23:38 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
-	if(!s)
-		return;
+	if (!s)
+		return ;
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
-		write(fd,&s[i],1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }
