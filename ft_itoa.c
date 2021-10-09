@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 20:50:13 by sali              #+#    #+#             */
-/*   Updated: 2021/10/09 00:00:49 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/09 10:36:49 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_checklen(int n)
 	}
 	return (len);
 }
-char *ft_putstr(char *ptr, int n, int len)
+char *ft_printnbr(char *ptr, int n, int len)
 {
 	int i;
 	int hold;
@@ -73,7 +73,7 @@ char *ft_itoa(int n)
 	ptr = (char *) malloc(len + 1 * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	ptr = ft_putstr(ptr, n , len);
+	ptr = ft_printnbr(ptr, n , len);
 	return (ptr);
 }
 // #include <stdio.h>
