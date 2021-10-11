@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 15:00:17 by sali              #+#    #+#             */
-/*   Updated: 2021/10/10 15:34:40 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/11 12:42:54 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	new = malloc(1 * sizeof(t_list));
 	if (new == NULL)
 		return (NULL);
-	new->content = *content;
-	next->next = NULL;
+	new->content = content;
+	new->next = NULL;
 	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:32:38 by sali              #+#    #+#             */
-/*   Updated: 2021/10/10 18:11:33 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/11 15:15:26 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
-	ptr = ft_lstlast(*lst);	
-	ptr->next = new;
-	new->next = NULL;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+		ptr = ft_lstlast(*lst);	
+		ptr->next = new;
 }

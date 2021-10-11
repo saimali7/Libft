@@ -6,11 +6,11 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 20:22:55 by sali              #+#    #+#             */
-/*   Updated: 2021/10/10 20:35:56 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/11 12:37:43 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
