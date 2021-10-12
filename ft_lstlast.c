@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:19:41 by sali              #+#    #+#             */
-/*   Updated: 2021/10/11 12:38:17 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/12 16:24:00 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst != NULL && lst->next != NULL)
+	while (lst != NULL && lst->next != NULL)
 	{
 		lst = lst->next;
 	}

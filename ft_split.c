@@ -6,19 +6,16 @@
 /*   By: sali <sali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 16:57:43 by sali              #+#    #+#             */
-/*   Updated: 2021/10/08 19:51:33 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/12 16:36:02 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include "ft_substr.c"
-// #include "ft_strlen.c"
-// #include "ft_calloc.c"
 
-int	ft_splitsize(char const *s, char c)
+static	int	ft_splitsize(char const *s, char c)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	len = 0;
 	i = 0;
@@ -30,16 +27,16 @@ int	ft_splitsize(char const *s, char c)
 			len++;
 		i++;
 	}
-	if(s[i] == '\0' && s[i - 1] != c)
+	if (s[i] == '\0' && s[i - 1] != c)
 		len++;
 	return (len);
 }
 
-char	**ft_nullfree(char **ptr, int j)
+static	char	**ft_nullfree(char **ptr, int j)
 {
 	while (j >= 0 && ptr[j] == NULL)
 	{
-		free(ptr[j]);
+		free (ptr[j]);
 		j--;
 	}
 	free(ptr);
@@ -47,12 +44,12 @@ char	**ft_nullfree(char **ptr, int j)
 	return (NULL);
 }
 
-char	**ft_splitnow(char const *s, char c, char **ptr)
+static	char	**ft_splitnow(char const *s, char c, char **ptr)
 {
-	size_t i;
-	int j;
-	int size;
-	
+	size_t	i;
+	int		j;
+	int		size;
+
 	size = 0;
 	i = 0;
 	j = 0;
@@ -60,13 +57,13 @@ char	**ft_splitnow(char const *s, char c, char **ptr)
 		i++;
 	while (i <= ft_strlen(s))
 	{
-		if(s[i] != c && s[i] != '\0')
+		if (s[i] != c && s[i] != '\0')
 			size++;
-		if((s[i] == '\0' || s[i] == c) && s[i - 1] != c)
+		if ((s[i] == '\0' || s[i] == c) && s[i - 1] != c)
 		{
 			ptr[j] = ft_substr(s, i - size, size);
-			if(ptr[j] == NULL)
-				return(ft_nullfree(ptr, j));
+			if (ptr[j] == NULL)
+				return (ft_nullfree(ptr, j));
 			size = 0;
 			j++;
 		}
@@ -75,32 +72,23 @@ char	**ft_splitnow(char const *s, char c, char **ptr)
 	return (ptr);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **ptr;
-	int arrysize;
+	char	**ptr;
+	int		arrysize;
 
-	if(!s)
-		return(ft_calloc(1,1));
-	arrysize = ft_splitsize(s, c);
-	ptr = (char **) malloc((arrysize + 1) * sizeof(char *));
-	if(ptr == NULL)
-		return (NULL);
-	ptr = ft_splitnow(s, c,  ptr);
-		if (arrysize == 0)
-		return (ptr); 
-	ptr[arrysize] = NULL;
-	return (ptr);
+	if (s)
+	{
+		arrysize = 0;
+		if (s[0] != '\0')
+			arrysize = ft_splitsize(s, c);
+		ptr = (char **) malloc((arrysize + 1) * sizeof(char *));
+		if (ptr == NULL)
+			return (NULL);
+		if (s[0] != '\0')
+			ptr = ft_splitnow(s, c, ptr);
+		ptr[arrysize] = NULL;
+		return (ptr);
+	}
+	return (0);
 }
-// #include <stdio.h>
-// int main(void)
-// {
-// 	int i = 0;
-// 	char **str;
-// 	str = ft_split("", ' ');
-// 	while (str[i] != NULL)
-// 	{
-// 		printf("%s\n", str[i]);
-// 		i++;
-// 	}
-// }

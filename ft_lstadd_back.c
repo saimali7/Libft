@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:32:38 by sali              #+#    #+#             */
-/*   Updated: 2021/10/11 15:15:26 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/12 16:22:26 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-		ptr = ft_lstlast(*lst);	
-		ptr->next = new;
+	ptr = ft_lstlast(*lst);
+	ptr->next = new;
 }
