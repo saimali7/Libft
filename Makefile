@@ -25,19 +25,38 @@ SRC_NAME = ft_atoi.c\
 		ft_substr.c\
 		ft_strjoin.c\
 		ft_strtrim.c\
-		ft_split.c
+		ft_split.c\
+		ft_itoa.c\
+		ft_strmapi.c\
+		ft_striteri.c\
+		ft_putchar_fd.c\
+		ft_putstr_fd.c\
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c
+
+BNS_SRCS = ft_lstsize.c \
+		   ft_lstadd_back.c \
+		   ft_lstadd_front.c \
+		   ft_lstclear.c \
+		   ft_lstdelone.c \
+		   ft_lstiter.c \
+		   ft_lstlast.c \
+		   ft_lstmap.c \
+		   ft_lstnew.c
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
-HEADER = ./includes/
+BNS_OBJS = $(BNS_SRCS:.c=.o)
 CFLAG = -Wall -Wextra -Werror
 NAME = libft.a
-all: ${NAME}
 ${NAME}:
 	gcc -c $(CFLAG) $(SRC_NAME)
 	ar -rc $(NAME) $(OBJ_NAME)
-	ranlib $(NAME)
+all: ${NAME}
+bonus: ${NAME}
+		gcc $(FLAGS) -c $(BNS_SRCS)
+		ar rc $(NAME) $(BNS_OBJS)
 clean:
-	rm -rf ${OBJ_NAME}
+	rm -rf ${OBJ_NAME} $(BNS_OBJS)
 fclean: clean
 	rm -f ${NAME}
-re: fclean all
+re: fclean all bonus
