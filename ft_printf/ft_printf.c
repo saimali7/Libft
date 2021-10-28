@@ -1,18 +1,27 @@
 #include <ft_printf.h>
 
-do_everything(const char *input, p_list *plist, int i)
+char get_specifier(const char *input, int i)
+{
+	i++;
+	if(input[i] == 'c' || input[i] == 's' || input[i] == 'p' || input[i] == 'd' || input[i] == 'u' || input[i] == 'x' || input[i] == 'X' || input == '%')
+		return (input[i]);
+	return (0);
+}
+
+do_everything(const char *input, p_list *plist, int *i)
 {
 	char specifier;
-	while(input[i] != '\0')
+	while(input[*i] != '\0')
 	{
 		reset_list(plist);
-		specifier = ft_setflags();
+		// specifier = ft_setflags();
+		specifier = get_specifier(input, *i);
 		if (specifier == 'c')
-		 ft_pchar(input, plist);
+		 ft_pchar(va_arg(plist->arg, i));
 		if (specifier == 's')
 		 ft_pstr();
 		if (specifier == 'p')
-		 ft_ppoint();
+		 ft_ppoint(va_arg());
 		if(specifier == 'd' || specifier == 'i')
 		 ft_pint();
 		if(specifier == 'u')
@@ -36,9 +45,10 @@ int	ft_printf(const char *input, ...)
 	va_start(plist->arg, input);
 	while (input[i] != '\0')
 	{
-		write(1,&input[i],1);
 		if (input[i] == '%')
-			p_specifier(input, plist, i);
+			p_specifier(input, plist, &i);
+		else
+			write(1,&input[i],1);
 		i++;
 	}
 	va_end(plist->arg);
