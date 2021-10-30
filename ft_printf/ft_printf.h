@@ -6,7 +6,7 @@
 /*   By: sali <sali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 11:29:06 by sali              #+#    #+#             */
-/*   Updated: 2021/10/28 17:39:01 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/30 23:20:09 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include "ft_putchar.c"
+# include "ft_strlen.c"
+# include "ft_putnbr.c"
+# include "ft_putbase.c"
+# include "char.c"
+# include "string.c"
+# include "pointer.c"
+# include "int.c"
+# include "unsigned.c"
+# include "hex.c"
+# include "caphex.c"
+# include "percent.c"
 
 typedef struct print_flags
 {
