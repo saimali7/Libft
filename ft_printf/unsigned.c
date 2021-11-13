@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   unsigned.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sali <sali@student.42abudhabi.ae>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/01 16:06:07 by sali              #+#    #+#             */
+/*   Updated: 2021/11/01 16:06:24 by sali             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-void	ft_punsinged(unsigned int n, int *i)
+void	ft_punsinged(unsigned int n, int *i, t_list *plist)
 {
-	ft_putun(n);
-	*i = *i + 2;
+	ft_putun(n, plist);
+	*i = *i + 1;
 }

@@ -6,13 +6,13 @@
 /*   By: sali <sali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:51:03 by sali              #+#    #+#             */
-/*   Updated: 2021/10/30 19:39:00 by sali             ###   ########.fr       */
+/*   Updated: 2021/10/31 15:06:15 by sali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlen(const char *s)
+unsigned int	ft_strlen(const char *s)
 {
-	size_t	i;
+	unsigned int	i;
 
 	i = 0;
 	while (s[i] != '\0')
